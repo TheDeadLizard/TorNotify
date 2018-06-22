@@ -3,7 +3,7 @@
 echo "Installing TorNotify"
 echo "Scripted by deadlizard@tutanota.com,https://twitter.com/TheDeadLizard1"
 echo "Cron set to run every five minutes. Please change as you wish"
-echo "No crontab for root"
+# echo "No crontab for root" if Kali
 sudo cp ./tornotify /usr/bin/tornotify #copy main file into bin
 sudo chmod 777 /usr/bin/tornotify
 sudo apt-get --assume-yes install jq #install jq from ubuntu repo
