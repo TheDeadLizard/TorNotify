@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#deadlizard@tutanota.com,https://twitter.com/TheDeadLizard1
+#Thanks to https://stedolan.github.io/jq/, http://ifconfig.co/
+#using jq library from apt-get command line json parser
+
+DISPLAY=:0; XAUTHORITY=~owner_of:0/.Xauthority; export DISPLAY XAUTHORITY ; #display for the initiated
+curl ifconfig.co/json > ~/.torNotify    #fetching response into file
+notify-send "IP Status" "`cat ~/.torNotify | jq '.'`" 
